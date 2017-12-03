@@ -54,4 +54,5 @@ group :production do
   gem 'devise'
   gem 'carrierwave'
   gem 'mechanize'
+  gem 'rails_12factor'
 end
