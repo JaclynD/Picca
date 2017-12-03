@@ -11,5 +11,5 @@ require "csv"
 companies_csv = CSV.readlines("db/restaurants.csv")
 companies_csv.shift
 companies_csv.each do |row|
-  Restaurant.create(name: row[1], address: row[2], main_image: row[3], location: row[4], genre: row[5], seats: row[6], budget: row[7], access: row[8], mobile_access: row[9], open: row[10])
+  Restaurant.create(name: row[1], address: row[2], main_image: row[3], location: row[6], genre: row[7], seats: row[8], budget: row[9], access: row[10], mobile_access: row[11], open: row[12])
 end
