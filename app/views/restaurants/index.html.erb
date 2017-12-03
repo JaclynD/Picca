@@ -1,0 +1,66 @@
+<!-- <!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>IndexPage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+ -->
+ <div class="index_page">
+    <header>
+      <div class="heading">
+        <a href="/"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+
+        <%= form_tag('/restaurants', method: :get) do %>
+        <div class="search_box">
+          <!-- <div class="keyword"> -->
+            <input type="text" name="keyword" placeholder="ジャンル" id="keyword">
+          <!-- </div> -->
+          <!-- <div class="place"> -->
+            <input type="text" name="place" placeholder="渋谷" id="place">
+          <!-- </div> -->
+        </div>
+          <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+        <% end %>
+        <!-- <i class="fa fa-map-pin" aria-hidden="true"></i> -->
+      </div>
+      <div class="tab">
+      <ul>
+        <li>エリア<i class="fa fa-angle-down" aria-hidden="true"></i></li>
+        <li>ジャンル<i class="fa fa-angle-down" aria-hidden="true"></i></li>
+        <li>順次<i class="fa fa-angle-down" aria-hidden="true"></i></li>
+        <li>フィルター<i class="fa fa-angle-down" aria-hidden="true"></i></li>
+      </ul>
+      </div>
+    </header>
+
+    <div class="contents clearfix">
+      <% @restaurants.each do |restaurant| %>
+
+      <a href="/restaurants/<%= restaurant.id %>">
+      <div class="container clearfix">
+        <div class="image">
+          <img src="<%= restaurant.main_image %>" alt="<%= restaurant.name %>">
+        </div>
+        <div class="text-part">
+          <%= image_tag "rate.png", :class=>"rate" %>
+          <h1><%= restaurant.name %></h1>
+          <p><%= restaurant.location %> / <%= restaurant.genre %> / <%= restaurant.seats %>席</p>
+          <p><%= restaurant.mobile_access %></p>
+        </div>
+        <div class="guest-number">
+          <p>6</p>
+        </div>
+      </div>
+      </a>
+
+      <% end %>
+
+    </div>
+
+</div>
+
+
+  <!-- </body>
+</html> -->

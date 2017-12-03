@@ -1,0 +1,337 @@
+// Place all the styles related to the reviews controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.review_index{
+  width: 100%;
+  height: 100%;
+  margin-bottom: 150px;
+  overflow: scroll;
+}
+.review_index .heading{
+  height: 400px;
+  background:url(bgpicture.png) no-repeat;
+  background-size: 100%;
+}
+.review_index .heading .logo{
+  text-align: center;
+  padding-top: 140px;
+}
+.review_index .heading .logo img{
+  height: 70px;
+}
+.review_index .heading a{
+  text-decoration: none;
+}
+.review_index .heading .search-box{
+  margin:0 auto;
+  width:800px;
+  height: 80px;
+  background-color:#FAC243;
+  border-radius: 10px;
+  position: relative;
+  top:45px;
+}
+.review_index .heading .search-box p {
+  color:#FFFFFF;
+  text-align: center;
+  font-size: 30px;
+  position: relative;
+  top:14px;
+}
+.review_index .heading .search-box .fa-search{
+  padding-right: 20px;
+  font-size: 36px;
+}
+.review_index .tab ul{
+  width:100%;
+  height:80px;
+  background-color:#c1c6cc;
+  display:-webkit-box;-webkit-box-sizing:border-box;
+  list-style: none;
+  padding:0;
+  margin:0;
+}
+.review_index .tab ul li{
+  width: 50%;
+  color:#ffffff;
+  line-height: 80px;
+  text-align: center;
+  border-right: 1px solid #FFFFFF;
+  font-size:24px;
+  -webkit-box-flex:1;text-align:center;
+}
+.review_index .container{
+  padding-top:20px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.review_index .container .profile{
+  float: left;
+  position: relative;
+  left:30px;
+}
+.review_index .container .profile .avatar{
+  width: 120px;height: 120px;
+  border-radius: 200px;
+}
+.review_index .container .profile .level{
+  font-size: 24px;
+  color:#ffffff;
+  text-align: center;
+  background-color: #FAC243;
+  width: 120px;
+  border-radius: 20px;
+  margin-top: 12px;
+}
+.review_index .container .profile h2{
+  text-align: center;
+}
+.review_index .container .review-box{
+  border:1px solid #c1c6cc;
+  border-radius: 20px;
+  width:700px;
+  padding:20px;
+  float: right;
+}
+.review_index .container .review-box p{
+  font-size: 24px;
+}
+.review_index .container .review-box .date p{
+  float: right;
+}
+.review_index .container .review-box h2{
+  font-size: 32px;
+}
+.review_index .container .review-box h4{
+  font-size: 28px;
+  line-height: 60px;
+}
+.review_index .container .review-box .rate-30{
+  background: url(good_yellow.png) no-repeat;
+  background-size: 100%;
+  padding: 20px;
+  position: relative;
+  top:12px;
+  left: 15px;
+}
+.review_index .container .review-box .rate-20{
+  background: url(ok_yellow.png) no-repeat;
+  background-size: 100%;
+  padding: 20px;
+  position: relative;
+  top:12px;
+  left: 15px;
+}
+.review_index .container .review-box .rate-10{
+  background: url(bad_yellow.png) no-repeat;
+  background-size: 100%;
+  padding: 20px;
+  position: relative;
+  top:12px;
+  left: 15px;
+}
+.review_index .container .review-box .keywords{
+  height: 70px;
+  position: relative;
+  left:-10px;
+}
+.review_index .container .review-box .keywords .keyword{
+  float: left;
+  background-color: #c1c6cc;
+  width: 200px;
+  text-align: center;
+  border-radius: 20px;
+  margin-top:10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.review_index .container .review-box ul{
+  list-style: none;
+  margin:0;
+  position: relative;
+  left:-35px;
+  top:10px;
+}
+.review_index .container .review-box ul li{
+  float: left;
+  padding-right: 20px;
+}
+.review_index .container .review-box ul li img{
+  width: 190px;
+  height: 190px;
+}
+.review_index .container .review-box .icon{
+  float: right;
+  font-size: 36px;
+  color:#A3B425;
+  position: relative;
+  top:10px;
+}
+.review_index .container .review-box .icon .fa-heart-o{
+  padding-right: 50px;
+}
+.review_index .container .review-box .more{
+  position: relative;
+  top:25px;
+  left: 5px;
+}
+.review_index .container .review-box .more .delete{
+  float: left;
+}
+.review_index .container .review-box .more .edit{
+  float:left;
+  position: relative;
+  left:40px;
+}
+
+.new_review{
+  width: 100%;
+  height: 100%;
+  margin-bottom: 150px;
+  overflow: scroll;
+}
+.new_review .heading{
+  height: 180px;
+  border-bottom: 2px solid #C4C4C9;
+}
+.new_review .heading .fa-chevron-left{
+  float: left;
+  position: relative;
+  font-size: 60px;
+  left:60px;
+  top:90px;
+}
+.new_review .heading h1{
+  font-size: 40px;
+  text-align: center;
+  position: relative;
+  top:80px;
+}
+.new_review .cost{
+  height: 120px;
+  border-bottom: 2px solid #C4C4C9;
+}
+.new_review .cost label{
+  font-size: 36px;
+}
+.new_review .cost input{
+  font-size: 36px;
+  width: 300px;
+  height:60px;
+  border:1px solid #C4C4C9;
+  margin-top: 28px;
+  margin-left: 20px;
+  padding-left: 10px;
+}
+.new_review .cost .lunch{
+  float: left;
+  width: 45%;
+  height:120px;
+  text-align: center;
+}
+.new_review .cost .dinner{
+  float: right;
+  width: 50%;
+  height:120px;
+  border-left: 2px solid #C4C4C9;
+  text-align: center;
+}
+.new_review .rate{
+  height: 300px;
+  border-bottom: 2px solid #C4C4C9;
+}
+.new_review .rate input{
+  margin-right:40px;
+  margin-left:40px;
+}
+.new_review .rate input[type="radio"] {
+  -webkit-appearance: none;
+  position: relative;
+  display: inline-block;
+  width: 125px;
+  height: 125px;
+}
+.new_review .rate input[type="radio"]:checked:before{
+  content:"";
+  position: absolute;
+  display: inline-block;
+  width: 125px;
+  height: 125px;
+}
+.new_review .rate .rate_icon{
+  text-align: center;
+  position: relative;
+  top:30px;
+}
+.new_review .rate #review_rate_30{
+  background: url(good_gray.png);
+  background-size: contain;
+}
+.new_review .rate #review_rate_30:checked:before{
+  background: url(good_yellow.png);
+  background-size: contain;
+}
+.new_review .rate #review_rate_20{
+  background: url(ok_gray.png);
+  background-size: contain;
+}
+.new_review .rate #review_rate_20:checked:before{
+  background: url(ok_yellow.png);
+  background-size: contain;
+}
+.new_review .rate #review_rate_10{
+  background: url(bad_gray.png);
+  background-size: contain;
+}
+.new_review .rate #review_rate_10:checked:before{
+  background: url(bad_yellow.png);
+  background-size: contain;
+}
+.new_review .rate p{
+  font-size: 32px;
+  padding:20px;
+}
+.new_review .text{
+  border-bottom: 2px solid #C4C4C9;
+}
+.new_review .text textarea{
+  font-size: 32px;
+  padding:20px;
+  height: 300px;
+  width: 100%;
+}
+.new_review .keywords p{
+  font-size: 32px;
+  padding:20px;
+  position: relative;
+  top:15px;
+}
+.new_review .keywords .guests{
+  height: 120px;
+  border-bottom: 2px solid #C4C4C9;
+}
+.new_review .keywords .atmosphere{
+  height: 120px;
+  border-bottom: 2px solid #C4C4C9;
+}
+.new_review .keywords .menu{
+  height: 120px;
+  border-bottom: 2px solid #C4C4C9;
+}
+.new_review .keywords .icon{
+  float: right;
+  position: relative;
+  top:-55px;
+  right: 20px;
+}
+.new_review .keywords .icon input{
+  margin-left: 30px;
+}
+.new_review .keywords .icon input[type=radio]{
+  width: 30px;
+  height: 30px;
+}
+.new_review .keywords .icon label{
+  font-size: 28px;
+}

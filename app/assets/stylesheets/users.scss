@@ -1,0 +1,271 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.sign_up {
+  width: 100%;
+  height: 100%;
+  background: url(sign_up@3x.png) no-repeat;
+  background-size: 100%;
+}
+.sign_up .heading{
+  padding-top:150px;
+  margin-bottom: 30px;
+}
+.sign_up .heading h1 {
+  text-align: center;
+}
+.sign_up .heading h1 img{
+  height:150px;
+}
+.sign_up .heading h3{
+  font-size: 45px;
+  text-align: center;
+  margin-top: 30px;
+}
+.sign_up .new_user{
+  width: 750px;
+  margin:0 auto;
+}
+.sign_up .new_user .field{
+  width: 100%;
+  margin:0 auto;
+}
+.sign_up .new_user .field label{
+  font-size: 32px;
+  color:#ffffff;
+}
+.sign_up .new_user .field input{
+  height: 90px;
+  width: 750px;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 15px;
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+.sign_up .new_user .file{
+  border:3px solid #FFFFFF;
+  height: 90px;
+  width: 750px;
+  border-radius: 15px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.sign_up .new_user .file input{
+  font-size: 24px;
+  margin-top:23px;
+  color: #ffffff;
+}
+.sign_up .actions{
+  margin-top: 120px;
+  height: 90px;
+  width: 750px;
+  background-color: #FAC243;
+  border-radius: 15px;
+  text-align: center;
+}
+.sign_up .actions input{
+  font-size: 36px;
+  margin-top:17px;
+}
+.sign_up .more_link_box{
+  margin-top: 60px;
+  font-size: 32px;
+  text-align: center;
+}
+
+.sign_in {
+  width: 100%;
+  height: 100%;
+  background: url(sign_up@3x.png) no-repeat;
+  background-size: 100%;
+}
+.sign_in .heading{
+  padding-top:150px;
+  margin-bottom: 30px;
+}
+.sign_in .heading h1 {
+  text-align: center;
+}
+.sign_in .heading h1 img{
+  height:150px;
+}
+.sign_in .heading h3{
+  font-size: 45px;
+  text-align: center;
+  margin-top: 30px;
+}
+.sign_in .new_user{
+  width: 750px;
+  margin:0 auto;
+}
+.sign_in .new_user .field{
+  width: 100%;
+  margin:0 auto;
+}
+.sign_in .new_user .field label{
+  font-size: 32px;
+  color:#ffffff;
+}
+.sign_in .new_user .field input{
+  height: 90px;
+  width: 750px;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 15px;
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+.sign_in .new_user .field input[type="checkbox"]{
+  width: 30px;
+  height: 30px;
+}
+.sign_in .actions{
+  margin-top: 120px;
+  height: 90px;
+  width: 750px;
+  background-color: #FAC243;
+  border-radius: 15px;
+  text-align: center;
+}
+.sign_in .actions input{
+  font-size: 36px;
+  margin-top:17px;
+}
+.sign_in .more_link_box{
+  text-align: center;
+  margin-top:60px;
+}
+.sign_in a{
+  text-decoration:none;
+  font-size: 28px;
+  line-height: 90px;
+}
+
+.user_page{
+  width: 100%;
+  height: 100%;
+  margin-bottom: 150px;
+  overflow: scroll;
+}
+.user_page .heading{
+  height: 250px;
+  background-color: #95989A;
+}
+.user_page .user_meta{
+  position: relative;
+  top:120px;
+}
+.user_page .user_meta p{
+  font-size: 36px;
+}
+.user_page .user_meta .avatar{
+  float: left;
+  position: relative;
+  top:-45px;
+  left: 40px;
+}
+.user_page .user_meta .avatar img{
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+}
+.user_page .user_meta .text{
+  float: left;
+  position: relative;
+  left: 80px;
+  top:-30px;
+}
+.user_page .sign_out{
+  text-align: center;
+  float: right;
+  border:2px solid #FFFFFF;
+  border-radius: 10px;
+  position: relative;
+  top:-50px;
+  right:40px;
+/*  width: 220px;*/
+}
+.user_page .sign_out a:link{
+  text-decoration:none;
+  line-height: 80px;
+  font-size: 30px;
+  padding:20px;
+  color:#FFFFFF;
+}
+.user_page .sign_out a:visited{
+  color:#FFFFFF;
+}
+.user_page .container{
+  padding-top:20px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.user_page .container .avatars{
+  float: left;
+  position: relative;
+  left:30px;
+}
+.user_page .container .avatars .avatar{
+  width: 120px;height: 120px;
+  border-radius: 200px;
+}
+.user_page .container .avatars .level{
+  font-size: 24px;
+  color:#ffffff;
+  text-align: center;
+  background-color: #FAC243;
+  width: 120px;
+  border-radius: 20px;
+  margin-top: 5px;
+}
+.user_page .container .review-box{
+  border:1px solid #c1c6cc;
+  border-radius: 20px;
+  width:700px;
+  min-height: 150px;
+  max-height: 900px;
+  padding:20px;
+  float: right;
+}
+.user_page .container .review-box .date p{
+  float: right;
+}
+.user_page .container .review-box h2{
+  font-size: 32px;
+}
+.user_page .container .review-box .fa-smile-o{
+  padding-left: 30px;
+}
+.user_page .container .review-box p{
+  font-size: 24px;
+}
+.user_page .container .review-box .keyword{
+  background-color: #c1c6cc;
+  width: 150px;
+  text-align: center;
+  border-radius: 20px;
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+.user_page .container .review-box ul{
+  list-style: none;
+  margin:0;
+  position: relative;
+  left:-35px;
+}
+.user_page .container .review-box ul li{
+  float: left;
+  padding-right: 20px;
+}
+.user_page .container .review-box ul li img{
+  width: 180px;
+  height: 180px;
+}
+.user_page .container .review-box .icon{
+  float: right;
+  font-size: 36px;
+  color:#A3B425;
+}
+.user_page .container .review-box .icon .fa-heart-o{
+  padding-right: 50px;
+}

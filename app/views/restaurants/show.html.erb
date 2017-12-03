@@ -1,0 +1,157 @@
+<div class="restaurant_detail">
+  <header class="header">
+    <a href="/restaurants"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+    <div class="icon">
+      <i class="fa fa-check-square-o" aria-hidden="true"></i>
+      <i class="fa fa-heart-o" aria-hidden="true"></i>
+      <a href="/restaurants/<%= @restaurant.id %>/reviews/new"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+    </div>
+  </header>
+
+  <div class="contents">
+
+    <div class="main_image">
+      <%= image_tag "main.jpeg" %>
+      <!-- <img src="main.jpeg" alt="<%= @restaurant.name %>"> -->
+    </div>
+
+    <div class="meta_wrapper clearfix">
+      <div class="meta clearfix">
+        <div class="info">
+          <h1><%= @restaurant.name %></h1>
+          <p><%= @restaurant.location %> / <%= @restaurant.genre %> / <%= @restaurant.seats %>席</p>
+        </div>
+        <div class="guest_number">
+          <p>6</p>
+        </div>
+      </div>
+          <table class="text">
+            <tbody>
+              <tr>
+                <th>予算:</th>
+                <td><%= @restaurant.budget %></td>
+              </tr>
+              <tr>
+                <th>住所:</th>
+                <td><%= @restaurant.address %></td>
+              </tr>
+              <tr>
+                <th>アクセス:</th>
+                <td><%= @restaurant.access %></td>
+              </tr>
+              <tr>
+                <th>営業時間:</th>
+                <td><%= @restaurant.open %></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+    <div class="container clearfix">
+      <h1>投稿写真</h1>
+      <div class="photos">
+        <ul>
+          <li><%= image_tag "photo.jpeg", :class=>"photo" %></li>
+          <li><%= image_tag "photo.jpeg", :class=>"photo" %></li>
+          <li><%= image_tag "photo.jpeg", :class=>"photo" %></li>
+        </ul>
+      </div>
+      <button class="btn" type="button">More<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+    </div>
+
+    <div class="container clearfix">
+      <h1>クチコミ</h1>
+
+    <% @restaurant.reviews.each do |review| %>
+    <div class="review_container clearfix">
+       <div class="profile">
+          <%= image_tag "avatar.JPG", :class=>"avatar" %>
+          <h2><%= review.user.nickname %></h2>
+          <div class="level"><p>属性</p></div>
+        </div>
+
+       <div class="review-box">
+         <div class="date clearfix">
+           <p><%= review.created_at.strftime("%Y-%m-%d")%></p>
+         </div>
+         <h2><%= review.restaurant.name %></h2>
+         <p>評価:<i class="rate-<%= review.rate %>"></i></p>
+         <% if review.dinner_cost.blank? %>
+           <p>昼：<%= review.lunch_cost %>円/人</p>
+         <% else %>
+           <p>夜：<%= review.dinner_cost %>円/人</p>
+         <% end %>
+
+
+         <div class="keywords clearfix">
+         <% if "#{review.guests}"=="0" %>
+           <div class="keyword">
+            <p>女性が多い</p>
+           </div>
+          <% elsif "#{review.guests}"=="1" %>
+          <div class="keyword">
+            <p>半分半分</p>
+           </div>
+          <% elsif "#{review.guests}"=="2" %>
+          <div class="keyword">
+            <p>男性が多い</p>
+           </div>
+           <% end %>
+
+           <% if "#{review.atmosphere}"=="0" %>
+           <div class="keyword">
+            <p>落ち着く</p>
+           </div>
+          <% elsif "#{review.atmosphere}"=="1" %>
+          <div class="keyword">
+            <p>にぎやか</p>
+           </div>
+          <% elsif "#{review.atmosphere}"=="2" %>
+          <div class="keyword">
+            <p>うるさい</p>
+           </div>
+           <% end %>
+
+           <% if "#{review.menu}"=="0" %>
+           <div class="keyword">
+            <p>ひとりメニュー</p>
+           </div>
+           <% end %>
+         </div> <!-- keywords -->
+
+          <div class="text">
+            <p><%= review.text %></p>
+          </div>
+
+            <ul class="photos clearfix">
+              <% review.photos.each do |photo| %>
+              <li><%= image_tag photo.image.url %></li>
+              <% end %>
+            </ul>
+
+         <div class="icon clearfix">
+           <i class="fa fa-heart-o" aria-hidden="true"></i>
+           <i class="fa fa-commenting-o" aria-hidden="true"></i>
+         </div>
+         <% if user_signed_in? && current_user.id == review.user_id %>
+         <div class="more">
+           <div class="delete">
+              <%= link_to '削除', "/restaurants/#{review.restaurant_id}/reviews/#{review.id}", method: :delete %>
+           </div>
+           <div class="edit">
+              <%= link_to '編集', "/restaurants/#{review.restaurant_id}/reviews/#{review.id}/edit", method: :get %>
+           </div>
+         </div>
+         <% end %>
+       </div>
+
+    </div> <!-- container -->
+    <% end %>
+
+  </div> <!-- container -->
+
+</div> <!-- contents -->
+
+</div> <!-- restaurant_detail -->
+
+

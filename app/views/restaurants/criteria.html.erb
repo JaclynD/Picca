@@ -1,0 +1,35 @@
+<div class="criteria_page">
+
+  <header>
+    <div class="heading">
+
+      <a href="/"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+
+      <%= form_tag('/restaurants/criteria', method: :get) do %>
+      <div class="search_box">
+        <input type="text" name="word" placeholder="ジャンル">
+        <input type="text" name="place" placeholder="エリア・駅">
+      </div>
+        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+      <% end %>
+
+    </div>
+  </header>
+
+  <div class="contents">
+    <% @restaurants.each do |restaurant| %>
+    <a href="/restaurants/<%= restaurant.id %>/reviews/new">
+    <div class="container clearfix">
+      <%= image_tag "photo.jpeg", :class=>"image" %>
+      <div class="text-part">
+        <h1><%= restaurant.name %></h1>
+        <p><%= restaurant.location %> / <%= restaurant.genre %></p>
+      </div>
+      <i class="fa fa-chevron-right" aria-hidden="true"></i>
+    </div>
+    </a>
+    <% end %>
+
+  </div>
+
+</div> <!-- pre_page -->

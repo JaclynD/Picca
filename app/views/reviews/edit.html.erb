@@ -1,0 +1,82 @@
+<div class="new_review">
+  <header>
+    <div class="heading">
+      <a href="/"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+      <h1><%= @restaurant.name %></h1>
+    </div>
+  </header>
+
+  <%= form_for [@restaurant, @review] do |f|%>
+    <div class="contents">
+      <div class="cost clearfix">
+        <div class="lunch">
+          <%= f.label :lunch_cost, "昼" %>
+          <%= f.text_field :lunch_cost, placeholder:'¥' %>
+        </div>
+        <div class="dinner">
+          <%= f.label :dinner_cost, "夜" %>
+          <%= f.text_field :dinner_cost, placeholder:'¥' %>
+        </div>
+      </div>
+
+      <div class="rate">
+        <p>一人食事の体験はいかがでしたか?</p>
+        <div class="rate_icon">
+          <%= f.radio_button :rate, 30 %>
+          <%= f.radio_button :rate, 20 %>
+          <%= f.radio_button :rate, 10 %>
+        </div>
+      </div>
+
+      <div class="keywords">
+        <div class="guests clearfix">
+          <P>ひとり客の構成</P>
+          <div class="icon" id="guests_icon">
+            <%= f.radio_button :guests, 0 %>
+            <%= f.label :guests, "女性が多い" %>
+            <%= f.radio_button :guests, 1 %>
+            <%= f.label :guests, "半分半分" %>
+            <%= f.radio_button :guests, 2 %>
+            <%= f.label :guests, "男性が多い" %>
+          </div>
+        </div>
+        <div class="atmosphere clearfix">
+          <P>お店の雰囲気</P>
+          <div class="icon" id="atmosphere_icon">
+            <%= f.radio_button :atmosphere, 0 %>
+            <%= f.label :atmosphere, "落ち着く" %>
+            <%= f.radio_button :atmosphere, 1 %>
+            <%= f.label :atmosphere, "にぎやか" %>
+            <%= f.radio_button :atmosphere, 2 %>
+            <%= f.label :atmosphere, "うるさい" %>
+          </div>
+        </div>
+        <div class="menu clearfix">
+          <P>ひとりメニュー</P>
+          <div class="icon" id="menu_icon">
+            <%= f.radio_button :menu, 0 %>
+            <%= f.label :menu, "ある" %>
+            <%= f.radio_button :menu, 1 %>
+            <%= f.label :menu, "ない" %>
+          </div>
+        </div>
+      </div>
+
+      <div class="text">
+       <%= f.text_area :text, placeholder: 'クチコミを書いてね！' %>
+      </div>
+
+      <div class="photos">
+        <%= f.fields_for :photos do |photo| %>
+        <%= photo.file_field :image %>
+        <% end %>
+      </div>
+
+      <div class="submit">
+        <%= f.submit "投稿する" %>
+      </div>
+      </div>
+    </div> <!-- contents -->
+  <% end %>
+
+</div> <!-- new_review -->

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Picca</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<script>
+    $(function() {
+        //一定時間後に処理を行う（0.8秒後）
+        setTimeout(function() {
+            //idが"notice"のdiv要素をゆっくりとフェードアウト
+            $('#notice').fadeOut("slow");
+        }, 2000);
+    });
+</script>
+
+<%= yield %>
+
+    <footer class="footer">
+      <ul class="tiled clearfix">
+        <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i><div>ホーム</div></a></li>
+        <li><a href="/restaurants"><i class="fa fa-search" aria-hidden="true"></i><div>お店を探す</div></a></li>
+        <li><a href="/restaurants/search"><i class="fa fa-plus-circle" aria-hidden="true"></i></li>
+        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i><div>メッセージ</div></a></li>
+        <% if user_signed_in? %>
+        <li><a href="/users/<%= current_user.id %>"><i class="fa fa-user-circle" aria-hidden="true"></i><div>マイページ</div></a></li>
+        <% else %>
+        <li><a href="/users/sign_in"><i class="fa fa-sign-in" aria-hidden="true"></i><div>ログイン</div></a></li>
+        <% end %>
+      </ul>
+    </footer>
+
+</body>
+</html>

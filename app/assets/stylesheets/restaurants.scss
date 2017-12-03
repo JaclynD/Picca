@@ -1,0 +1,523 @@
+// Place all the styles related to the restaurants controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body, html {
+  height: 100%;
+  background-color: white;
+}
+
+h1, h2, h3, h4, h5, h6, p, body {
+  line-height: 1.77;
+  font-size: 18px;
+  color: #4a4a4a;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.search_page {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 150px;
+  overflow: scroll;
+}
+.search_page .heading{
+  height: 180px;
+  background-color: #ffffff;
+  border-bottom: 3px solid #C4C4C9;
+}
+.search_page .heading .search_box{
+  margin:0 auto;
+  width:600px;height: 60px;
+  background-color:#3A3E4E;
+  border-radius: 10px;
+  position: relative;
+  top:90px;
+}
+.search_page .heading .search_box input{
+  font-size: 30px;
+  background-color: #3A3E4E;
+  border: none;
+  position: relative;
+  top:11px;
+  left: 200px;
+}
+.search_page .heading .search_box input::placeholder{
+  color: #FFFFFF;
+}
+.search_page .heading button{
+  float: right;
+  position: relative;
+  top:30px;
+  right:60px;
+}
+.search_page .heading button .fa-search{
+  font-size: 45px;
+  color:#3A3E4E;
+}
+.search_page .heading .fa-chevron-left{
+  float: left;
+  position: relative;
+  font-size: 60px;
+  left:60px;
+  top:90px;
+}
+.search_page .container{
+  height: 150px;
+  border-bottom:2px solid #C4C4C9;
+  padding:30px;
+}
+.search_page .container .image{
+  width: 150px;height: 150px;
+  float: left;
+}
+.search_page .container .text-part{
+  float: left;
+  position: relative;
+  left: 30px;
+  top:15px;
+}
+.search_page .container h1{
+  font-size: 36px;
+}
+.search_page .container p{
+  font-size: 28px;
+}
+.search_page .container .fa-chevron-right{
+  float: right;
+  font-size: 36px;
+  position: relative;
+  right: 15px;
+  top:55px;
+}
+
+.index_page {
+  width:100%;
+  height:100%;
+  margin-bottom: 150px;
+  overflow: scroll;
+}
+.index_page .heading{
+  height: 180px;
+  background-color: #ffffff;
+  border-bottom: 3px solid #C4C4C9;
+}
+.index_page .heading .search_box{
+  text-align: center;
+  position: relative;
+  top:80px;
+  right: 21px;
+}
+/*.index_page .heading .search_box .place .fa-map-marker{
+  color: #FFFFFF;
+  font-size: 36px;
+  position: relative;
+  top:12px;
+  left: 240px;
+}*/
+.index_page .heading .search_box input{
+  color: #FFFFFF;
+  font-size: 30px;
+  width:310px;height: 70px;
+  background-color: #3A3E4E;
+  border-radius: 10px;
+}
+.index_page .heading .search_box input::placeholder{
+  color: #FFFFFF;
+  font-size: 30px;
+  text-align:center;
+}
+.index_page .heading button{
+  float: right;
+  position: relative;
+  top:10px;
+  right:55px;
+}
+.index_page .heading button .fa-search{
+  font-size: 50px;
+  color:#3A3E4E;
+}
+.index_page .heading .fa-chevron-left{
+  float: left;
+  position: relative;
+  font-size: 60px;
+  left:60px;
+  top:90px;
+}
+.index_page .tab ul{
+  width:100%;
+  height:80px;
+  background-color:#c1c6cc;
+  display:-webkit-box;-webkit-box-sizing:border-box;
+  list-style: none;
+  padding:0;
+  margin:0;
+}
+.index_page .tab ul li{
+  width: 25%;
+  color:#ffffff;
+  line-height: 80px;
+  text-align: center;
+  border-right: 1px solid #FFFFFF;
+  font-size:24px;
+  -webkit-box-flex:1;text-align:center;
+}
+.index_page .tab ul li .fa-angle-down{
+  padding-left:10px;
+}
+.index_page .container{
+  width: 100%;
+  min-height:330px;
+  border-bottom: 1px solid #3A3E4E;
+}
+.index_page .container .image img{
+  width:270px; height:270px;
+  padding:30px;
+  float: left;
+}
+.index_page .container .text-part {
+  float: left;
+  margin:30px auto;
+  max-width: 430px;
+}
+.index_page .container .text-part img{
+  height: 95%;
+  width: 95%;
+}
+.index_page .container .text-part p{
+  font-size: 24px;
+}
+.index_page .container .text-part h1{
+  font-size: 32px;
+}
+.index_page .container .guest-number{
+  float: right;
+  text-align: center;
+  margin-top: 30px;
+  margin-right: 60px;
+  width: 120px;
+  height: 120px;
+  background-color: #ffffff;
+  background: url(number@3x.png) no-repeat;
+  background-size: 120px 120px;
+}
+.index_page .container .guest-number p{
+  padding:24px;
+  font-size: 42px;
+}
+.restaurant_detail{
+  width: 100%;
+  height: 100%;
+  margin-bottom: 150px;
+  overflow: scroll;
+}
+.restaurant_detail .header{
+  width: 100%;
+  height: 180px;
+  background-color: #ffffff;
+}
+.restaurant_detail .header .fa-chevron-left{
+  float: left;
+  position: relative;
+  font-size: 60px;
+  left:60px;
+  top:90px;
+}
+.restaurant_detail .header .icon {
+  float: right;
+  position:relative;
+  right:72px;
+  top:60px;
+  font-size:60px;
+}
+.restaurant_detail .header .icon .fa{
+  padding-left: 60px;
+}
+.restaurant_detail .main_image {
+  width:100%;
+  height: 600px;
+}
+.restaurant_detail .main_image img{
+  height: 600px;
+  width: 100%
+}
+.restaurant_detail .meta_wrapper{
+  min-height: 480px;
+  padding:30px;
+}
+.restaurant_detail .meta_wrapper .meta .info{
+  float: left;
+}
+.restaurant_detail .meta_wrapper .meta .info h1{
+  font-size: 42px;
+}
+.restaurant_detail .meta_wrapper .meta .info p{
+  font-size: 24px;
+}
+.restaurant_detail .meta_wrapper .meta .guest_number{
+  float: right;
+  text-align: center;
+  width: 120px;
+  height: 120px;
+/*  background-color: #ffffff;*/
+  background: url(number@3x.png) no-repeat;
+  background-size: 120px 120px;
+}
+.restaurant_detail .meta_wrapper .meta .guest_number p{
+  padding:24px;
+  font-size: 42px;
+}
+.restaurant_detail .meta_wrapper table{
+  margin-top:40px;
+  border: 1px solid #ccc;
+}
+.restaurant_detail .meta_wrapper .text th{
+  border: 1px solid #ccc;
+  padding:10px;
+  font-size: 21px;
+  width: 100px;
+  text-align: left;
+}
+.restaurant_detail .meta_wrapper .text td{
+  border: 1px solid #ccc;
+  padding:10px;
+  font-size: 21px;
+  vertical-align: top;
+}
+.restaurant_detail .container{
+  width: 100%;
+  height: 400px;
+  margin-top:50px;
+  border-top:3px solid #3A3E4E;
+}
+.restaurant_detail .container h1{
+  margin:0 auto;
+  width: 250px;
+  position: relative;
+  top:-30px;
+  font-size:36px;
+  text-align: center;
+  background-color:#ffffff;
+}
+.restaurant_detail .container .photos{
+  width: 100%;
+}
+.restaurant_detail .container .photos ul{
+  list-style: none;
+  margin:0;
+}
+.restaurant_detail .container .photos ul li{
+  float: left;
+  width: 33%;
+}
+.restaurant_detail .container .photos ul li .photo{
+  width:280px; height: 280px;
+}
+.restaurant_detail .container .btn{
+/*  clear: both;*/
+  width:120px;height: 50px;
+  background-color:#FAC243;
+  border-radius: 5px;
+  float: right;
+  position: relative;
+  top:20px;right:40px;
+  font-size: 24px;
+  color:#FFFFFF;
+}
+.restaurant_detail .container .btn .fa-angle-right{
+  padding-left: 15px;
+}
+
+.restaurant_detail .container .review_container{
+  padding-top:20px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.restaurant_detail .container .review_container .profile{
+  float: left;
+  position: relative;
+  left:30px;
+}
+.restaurant_detail .container .review_container .profile .avatar{
+  width: 120px;height: 120px;
+  border-radius: 200px;
+}
+.restaurant_detail .container .review_container .profile .level{
+  font-size: 24px;
+  color:#ffffff;
+  text-align: center;
+  background-color: #FAC243;
+  width: 120px;
+  border-radius: 20px;
+  margin-top: 12px;
+}
+.restaurant_detail .container .review_container .profile h2{
+  text-align: center;
+}
+.restaurant_detail .container .review_container .review-box{
+  border:1px solid #c1c6cc;
+  border-radius: 20px;
+  width:700px;
+  min-height: 150px;
+  padding:20px;
+  float: right;
+}
+.restaurant_detail .container .review_container .review-box .date p{
+  float: right;
+}
+.restaurant_detail .container .review_container .review-box h2{
+  font-size: 32px;
+}
+.restaurant_detail .container .review_container .review-box .rate-30{
+  background: url(good_yellow.png) no-repeat;
+  background-size: 100%;
+  padding: 20px;
+  position: relative;
+  top:12px;
+  left: 15px;
+}
+.restaurant_detail .container .review_container .review-box .rate-20{
+  background: url(ok_yellow.png) no-repeat;
+  background-size: 100%;
+  padding: 20px;
+  position: relative;
+  top:12px;
+  left: 15px;
+}
+.restaurant_detail .container .review_container .review-box .rate-10{
+  background: url(bad_yellow.png) no-repeat;
+  background-size: 100%;
+  padding: 20px;
+  position: relative;
+  top:12px;
+  left: 15px;
+}
+.restaurant_detail .container .review_container .review-box p{
+  font-size: 24px;
+}
+.restaurant_detail .container .review_container .review-box .keywords{
+  height: 70px;
+  position: relative;
+  left:-10px;
+}
+.restaurant_detail .container .review_container .review-box .keywords .keyword{
+  float: left;
+  background-color: #c1c6cc;
+  width: 200px;
+  text-align: center;
+  border-radius: 20px;
+  margin-top:10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.restaurant_detail .container .review_container .review-box ul{
+  list-style: none;
+  margin:0;
+  position: relative;
+  left:-35px;
+  top:10px;
+}
+.restaurant_detail .container .review_container .review-box ul li{
+  float: left;
+  padding-right: 20px;
+}
+.restaurant_detail .container .review_container .review-box ul li img{
+  width: 190px;
+  height: 190px;
+}
+.restaurant_detail .container .review_container .review-box .icon{
+  float: right;
+  font-size: 36px;
+  color:#A3B425;
+  position: relative;
+  top:10px;
+}
+.restaurant_detail .container .review_container .review-box .icon .fa-heart-o{
+  padding-right: 50px;
+}
+.restaurant_detail .container .review_container .review-box .more{
+  position: relative;
+  top:25px;
+  left: 5px;
+}
+.restaurant_detail .container .review_container .review-box .more .delete{
+  float: left;
+}
+.restaurant_detail .container .review_container .review-box .more .edit{
+  float:left;
+  position: relative;
+  left:40px;
+}
+
+.footer{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  height: 150px;
+  background-color:#3A3E4E;
+}
+.footer .tiled{
+  position:relative;
+  top:35px;
+  padding:0;
+  margin:0;
+  list-style: none;
+  display:-webkit-box;-webkit-box-sizing:border-box
+}
+.footer .tiled li{
+  width:20%;
+  font-size: 24px;
+  color:#ffffff;
+  -webkit-box-flex:1;text-align:center;/*display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-pack:center;-webkit-box-align:center*/
+}
+.footer .tiled .fa{
+  font-size: 42px;
+}
+.footer .tiled a{
+  text-decoration: none;
+}
+.footer .tiled a:link{
+  color:#FFFFFF;
+}
+.footer .tiled a:visited{
+  color:#FFFFFF;
+}
+.footer .tiled .fa-plus-circle{
+  float: left;
+  position: relative;
+  right: -60px;
+  top:-20px;
+  font-size: 120px;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+#notice{
+  width: 100%;
+  background-color: #FAC243;
+  text-align: center;
+  color:#FFFFFF;
+  font-size: 36px;
+  padding-top:70px;
+  padding-bottom:70px;
+}
+/*
+.flash {
+  font-size: 36px;
+  color: #fff;
+  text-align: center;
+}
+.flash__alert{
+  background-color:#FAC243;
+  height:180px;
+}
+.flash__notice {
+  padding:60px;
+  background-color: #FAC243;
+}
+*/
