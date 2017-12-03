@@ -50,3 +50,8 @@ group :development do
   gem 'mechanize'
 end
 
+group :production do
+  gem 'devise'
+  gem 'carrierwave'
+  gem 'mechanize'
+end
