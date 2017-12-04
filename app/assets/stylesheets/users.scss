@@ -164,7 +164,7 @@
   top:-45px;
   left: 40px;
 }
-.user_page .user_meta .avatar img{
+.user_page .user_meta img{
   width: 150px;
   height: 150px;
   border-radius: 100px;
@@ -200,32 +200,13 @@
   padding-right: 20px;
   padding-left: 20px;
 }
-.user_page .container .avatars{
-  float: left;
-  position: relative;
-  left:30px;
-}
-.user_page .container .avatars .avatar{
-  width: 120px;height: 120px;
-  border-radius: 200px;
-}
-.user_page .container .avatars .level{
-  font-size: 24px;
-  color:#ffffff;
-  text-align: center;
-  background-color: #FAC243;
-  width: 120px;
-  border-radius: 20px;
-  margin-top: 5px;
-}
 .user_page .container .review-box{
   border:1px solid #c1c6cc;
   border-radius: 20px;
-  width:700px;
-  min-height: 150px;
-  max-height: 900px;
   padding:20px;
-  float: right;
+}
+.user_page .container .review-box p{
+  font-size: 24px;
 }
 .user_page .container .review-box .date p{
   float: right;
@@ -233,39 +214,84 @@
 .user_page .container .review-box h2{
   font-size: 32px;
 }
-.user_page .container .review-box .fa-smile-o{
-  padding-left: 30px;
+.user_page .container .review-box h4{
+  font-size: 28px;
+  line-height: 60px;
 }
-.user_page .container .review-box p{
-  font-size: 24px;
+.user_page .container .review-box .rate-30{
+  background: url(good_yellow.png) no-repeat;
+  background-size: 100%;
+  padding: 20px;
+  position: relative;
+  top:12px;
+  left: 15px;
 }
-.user_page .container .review-box .keyword{
+.user_page .container .review-box .rate-20{
+  background: url(ok_yellow.png) no-repeat;
+  background-size: 100%;
+  padding: 20px;
+  position: relative;
+  top:12px;
+  left: 15px;
+}
+.user_page .container .review-box .rate-10{
+  background: url(bad_yellow.png) no-repeat;
+  background-size: 100%;
+  padding: 20px;
+  position: relative;
+  top:12px;
+  left: 15px;
+}
+.user_page .container .review-box .keywords{
+  height: 70px;
+  position: relative;
+  left:-10px;
+}
+.user_page .container .review-box .keywords .keyword{
+  float: left;
   background-color: #c1c6cc;
-  width: 150px;
+  width: 200px;
   text-align: center;
   border-radius: 20px;
   margin-top:10px;
   margin-bottom: 10px;
+  margin-left: 10px;
 }
 .user_page .container .review-box ul{
   list-style: none;
   margin:0;
   position: relative;
   left:-35px;
+  top:10px;
 }
 .user_page .container .review-box ul li{
   float: left;
   padding-right: 20px;
 }
 .user_page .container .review-box ul li img{
-  width: 180px;
-  height: 180px;
+  width: 190px;
+  height: 190px;
 }
 .user_page .container .review-box .icon{
   float: right;
   font-size: 36px;
   color:#A3B425;
+  position: relative;
+  top:10px;
 }
 .user_page .container .review-box .icon .fa-heart-o{
   padding-right: 50px;
+}
+.user_page .container .review-box .more{
+  position: relative;
+  top:25px;
+  left: 5px;
+}
+.user_page .container .review-box .more .delete{
+  float: left;
+}
+.user_page .container .review-box .more .edit{
+  float:left;
+  position: relative;
+  left:40px;
 }

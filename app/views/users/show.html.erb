@@ -3,9 +3,11 @@
     <div class="heading">
 
       <div class="user_meta clearfix">
-        <div class="avatar">
-          <%= image_tag "avatar.JPG"%>
-        </div>
+        <% if current_user.avatar.present? %>
+          <%= image_tag current_user.avatar.url, :class=>"avatar"%>
+          <% else %>
+          <%= image_tag "avatar.JPG", :class=>"avatar" %>
+          <% end %>
         <div class="text">
           <div class="name">
             <p><%= current_user.nickname %></p>
@@ -25,27 +27,69 @@
   <div class="contents">
     <% current_user.reviews.each do |review| %>
     <div class="container clearfix">
-       <div class="avatars">
-          <%= image_tag "avatar.JPG", :class=>"avatar" %>
-          <div class="level"><p>属性</p></div>
-        </div>
+      <div class="review-box clearfix">
+         <div class="date clearfix">
+           <p><%= review.created_at.strftime("%Y-%m-%d")%></p>
+         </div>
+         <h2><%= review.restaurant.name %></h2>
+         <p>評価:<i class="rate-<%= review.rate %>"></i></p>
+         <% if review.dinner_cost.blank? %>
+           <p>昼：<%= review.lunch_cost %>円/人</p>
+         <% else %>
+           <p>夜：<%= review.dinner_cost %>円/人</p>
+         <% end %>
 
-       <div class="review-box">
-         <div class="date"><p><%= review.created_at %></p></div>
-         <h2>NICKNAME<i class="fa fa-smile-o" aria-hidden="true"></i></h2>
-         <p><%= review.text %></p>
-         <p>昼：<%= review.lunch_cost %>円/人</p>
-         <p>夜：<%= review.dinner_cost %>円/人</p>
-         <div class="keyword"><p>落ち着いた</p></div>
-         <ul class="photos clearfix">
-            <li><%= image_tag "photo.jpeg" %></li>
-            <li><%= image_tag "photo.jpeg" %></li>
-            <li><%= image_tag "photo.jpeg" %></li>
-          </ul>
+         <div class="keywords clearfix">
+         <% if "#{review.guests}"=="0" %>
+           <div class="keyword">
+            <p>女性が多い</p>
+           </div>
+          <% elsif "#{review.guests}"=="1" %>
+          <div class="keyword">
+            <p>半分半分</p>
+           </div>
+          <% elsif "#{review.guests}"=="2" %>
+          <div class="keyword">
+            <p>男性が多い</p>
+           </div>
+           <% end %>
+
+           <% if "#{review.atmosphere}"=="0" %>
+           <div class="keyword">
+            <p>落ち着く</p>
+           </div>
+          <% elsif "#{review.atmosphere}"=="1" %>
+          <div class="keyword">
+            <p>にぎやか</p>
+           </div>
+          <% elsif "#{review.atmosphere}"=="2" %>
+          <div class="keyword">
+            <p>うるさい</p>
+           </div>
+           <% end %>
+
+           <% if "#{review.menu}"=="0" %>
+           <div class="keyword">
+            <p>ひとりメニュー</p>
+           </div>
+           <% end %>
+         </div> <!-- keywords -->
+
+          <div class="text">
+            <p><%= review.text %></p>
+          </div>
+
+            <ul class="photos clearfix">
+              <% review.photos.each do |photo| %>
+              <li><%= image_tag photo.image.url %></li>
+              <% end %>
+            </ul>
+
          <div class="icon clearfix">
            <i class="fa fa-heart-o" aria-hidden="true"></i>
            <i class="fa fa-commenting-o" aria-hidden="true"></i>
          </div>
+
          <% if user_signed_in? && current_user.id == review.user_id %>
          <div class="more">
            <div class="delete">
@@ -56,7 +100,8 @@
            </div>
          </div>
          <% end %>
-       </div>
+       </div> <!-- review-box -->
+
     </div> <!-- container -->
     <% end %>
   </div>

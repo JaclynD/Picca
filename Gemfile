@@ -44,17 +44,12 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'devise'
-  gem 'carrierwave'
   gem 'pry-rails'
-  gem 'mechanize'
-  gem 'paperclip'
 end
 
 group :production do
+  gem 'rails_12factor'
+end
+
   gem 'devise'
   gem 'carrierwave'
-  gem 'mechanize'
-  gem 'rails_12factor'
-  gem 'paperclip'
-end
