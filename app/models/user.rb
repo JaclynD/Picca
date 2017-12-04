@@ -7,4 +7,11 @@ class User < ActiveRecord::Base
   has_many :reviews
   has_many :photos
 
+<<<<<<< HEAD
+=======
+  has_attached_file :avatar,
+                      styles:  { medium: "300x300#", thumb: "100x100#" }
+  validates_attachment_content_type :avatar,
+                                      content_type: ["image/jpg","image/jpeg","image/png"]
+>>>>>>> aa55d3340c075be0d35f698e0b3f9c514b87c0d5
 end

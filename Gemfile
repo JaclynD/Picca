@@ -48,6 +48,7 @@ group :development do
   gem 'carrierwave'
   gem 'pry-rails'
   gem 'mechanize'
+  gem 'paperclip'
 end
 
 group :production do
@@ -55,4 +56,5 @@ group :production do
   gem 'carrierwave'
   gem 'mechanize'
   gem 'rails_12factor'
+  gem 'paperclip'
 end
